@@ -24,7 +24,7 @@ phases:
       - |
         if [ -z "$ROLLBACK_COMMIT_ID" ]; then
         echo "Building the docker image"
-        docker build --build-arg  --tag $IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION -f Dockerfile .
+        docker build --tag $IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION -f Dockerfile .
         else
         echo "Docker build not required"
         fi
